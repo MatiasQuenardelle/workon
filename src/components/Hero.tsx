@@ -72,19 +72,6 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Trust strip */}
-            <div className="animate-fade-in-up animation-delay-600 mt-14 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 lg:justify-start">
-              {[
-                { value: "500+", label: "empresas" },
-                { value: "10K+", label: "prendas/mes" },
-                { value: "100%", label: "Argentina" },
-              ].map((stat) => (
-                <div key={stat.label} className="flex items-baseline gap-1.5">
-                  <span className="text-lg font-bold text-white/90">{stat.value}</span>
-                  <span className="text-xs tracking-wide text-white/35">{stat.label}</span>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* ── Right: Image mosaic ── */}
