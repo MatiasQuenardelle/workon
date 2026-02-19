@@ -24,13 +24,12 @@ export default function Products() {
               key={cat.name}
               className="group relative overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-gray-200/50"
             >
-              <div className="relative flex h-64 items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 p-4">
+              <div className="relative h-72 overflow-hidden">
                 <Image
                   src={cat.image}
                   alt={cat.name}
-                  width={400}
-                  height={400}
-                  className="h-full w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>

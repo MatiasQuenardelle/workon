@@ -20,8 +20,9 @@ export const CATEGORIES = [
   {
     name: "Remeras Chomba",
     description: "Polos bordados o estampados con el logo de tu empresa",
-    image: "/images/products/chomba-blanca.png",
+    image: "https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=800&q=80",
     variants: [
+      "/images/products/chomba-blanca.png",
       "/images/products/chomba-negra.png",
       "/images/products/chomba-verde.png",
       "/images/products/chomba-gris.png",
@@ -31,8 +32,9 @@ export const CATEGORIES = [
   {
     name: "Remeras de Algodón",
     description: "Algodón peinado de primera calidad, múltiples colores",
-    image: "/images/products/remera-blanca.png",
+    image: "https://images.unsplash.com/photo-1604328703693-18313fe20f3a?w=800&q=80",
     variants: [
+      "/images/products/remera-blanca.png",
       "/images/products/remera-negra.png",
       "/images/products/remera-gris.png",
       "/images/products/remera-verde.png",
@@ -42,8 +44,9 @@ export const CATEGORIES = [
   {
     name: "Camisas Corporativas",
     description: "Manga corta y larga para un look profesional",
-    image: "/images/products/camisa-hombre.png",
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
     variants: [
+      "/images/products/camisa-hombre.png",
       "/images/products/camisa-mujer.png",
       "/images/products/camisa-hombre-espalda.png",
       "/images/products/camisa-mujer-espalda.png",
@@ -52,14 +55,15 @@ export const CATEGORIES = [
   {
     name: "Buzos y Camperas",
     description: "Abrigo con la identidad de tu marca",
-    image: "/images/trabajos/hasting-campera.png",
+    image: "https://images.unsplash.com/photo-1579572331145-5e53b299c64e?w=800&q=80",
     variants: [],
   },
   {
     name: "Accesorios",
     description: "Delantales, cofias y bandanas personalizados",
-    image: "/images/trabajos/nani-delantal.png",
+    image: "https://images.unsplash.com/photo-1615689989369-ce5c12f05822?w=800&q=80",
     variants: [
+      "/images/trabajos/nani-delantal.png",
       "/images/trabajos/nani-bandana.png",
       "/images/trabajos/nani-cofia.png",
       "/images/trabajos/nani-medio-delantal.png",
@@ -68,8 +72,9 @@ export const CATEGORIES = [
   {
     name: "Ropa de Trabajo",
     description: "Indumentaria industrial y de seguridad personalizada",
-    image: "/images/trabajos/star-camisa.png",
+    image: "https://images.unsplash.com/photo-1705579612477-20866d78deeb?w=800&q=80",
     variants: [
+      "/images/trabajos/star-camisa.png",
       "/images/trabajos/star-detalle.png",
       "/images/trabajos/star-camisa-multi.png",
     ],
@@ -79,6 +84,8 @@ export const CATEGORIES = [
 export const GALLERY_ITEMS = [
   { image: "/images/trabajos/star-polo-promo.jpg", brand: "Star", type: "Chomba corporativa" },
   { image: "/images/trabajos/star-polo-espalda.jpg", brand: "Star", type: "Bordado espalda" },
+  { image: "/images/trabajos/star-camisa.png", brand: "Star", type: "Camisa corporativa" },
+  { image: "/images/trabajos/star-camisa-multi.png", brand: "Star", type: "Camisas personalizadas" },
   { image: "/images/trabajos/benelli.png", brand: "Benelli Nordeste", type: "Remera estampada" },
   { image: "/images/trabajos/morbidelli.png", brand: "Morbidelli", type: "Remera estampada" },
   { image: "/images/trabajos/celiaco-delantal.png", brand: "Centro del Celíaco", type: "Delantal bordado" },
