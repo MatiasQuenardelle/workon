@@ -42,3 +42,7 @@ next-env.d.ts
 
 # drive folder (product images source)
 /drive
+drive-download-*/
+
+# vscode workspace
+*.code-workspace
