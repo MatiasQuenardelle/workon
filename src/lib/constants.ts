@@ -20,9 +20,8 @@ export const CATEGORIES = [
   {
     name: "Remeras Chomba",
     description: "Polos bordados o estampados con el logo de tu empresa",
-    image: "https://images.unsplash.com/photo-1770058428104-9dab343b7ccc?w=800&q=80",
+    image: "/images/products/chomba-blanca.png",
     variants: [
-      "/images/products/chomba-blanca.png",
       "/images/products/chomba-negra.png",
       "/images/products/chomba-verde.png",
       "/images/products/chomba-gris.png",
@@ -32,9 +31,8 @@ export const CATEGORIES = [
   {
     name: "Remeras de Algodón",
     description: "Algodón peinado de primera calidad, múltiples colores",
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
+    image: "/images/products/remera-blanca.png",
     variants: [
-      "/images/products/remera-blanca.png",
       "/images/products/remera-negra.png",
       "/images/products/remera-gris.png",
       "/images/products/remera-verde.png",
@@ -44,9 +42,8 @@ export const CATEGORIES = [
   {
     name: "Camisas Corporativas",
     description: "Manga corta y larga para un look profesional",
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
+    image: "/images/products/camisa-hombre.png",
     variants: [
-      "/images/products/camisa-hombre.png",
       "/images/products/camisa-mujer.png",
       "/images/products/camisa-hombre-espalda.png",
       "/images/products/camisa-mujer-espalda.png",
@@ -55,15 +52,16 @@ export const CATEGORIES = [
   {
     name: "Buzos y Camperas",
     description: "Abrigo con la identidad de tu marca",
-    image: "https://images.unsplash.com/photo-1579572331145-5e53b299c64e?w=800&q=80",
-    variants: [],
+    image: "/images/trabajos/hasting-campera.png",
+    variants: [
+      "/images/trabajos/hasting-detalle.png",
+    ],
   },
   {
     name: "Accesorios",
     description: "Delantales, cofias y bandanas personalizados",
-    image: "https://images.unsplash.com/photo-1753351052363-53ce102830eb?w=800&q=80",
+    image: "/images/trabajos/nani-delantal.png",
     variants: [
-      "/images/trabajos/nani-delantal.png",
       "/images/trabajos/nani-bandana.png",
       "/images/trabajos/nani-cofia.png",
       "/images/trabajos/nani-medio-delantal.png",
@@ -72,9 +70,8 @@ export const CATEGORIES = [
   {
     name: "Ropa de Trabajo",
     description: "Indumentaria industrial y de seguridad personalizada",
-    image: "https://images.unsplash.com/photo-1705579612477-20866d78deeb?w=800&q=80",
+    image: "/images/trabajos/star-camisa.png",
     variants: [
-      "/images/trabajos/star-camisa.png",
       "/images/trabajos/star-detalle.png",
       "/images/trabajos/star-camisa-multi.png",
     ],

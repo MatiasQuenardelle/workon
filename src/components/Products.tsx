@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ArrowRight } from "lucide-react";
 import { CATEGORIES, getWhatsAppUrl } from "@/lib/constants";
 
 export default function Products() {
@@ -18,61 +18,72 @@ export default function Products() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {CATEGORIES.map((cat, index) => (
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {CATEGORIES.map((cat) => (
             <div
               key={cat.name}
-              className="group relative overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-gray-200/50"
+              className="group relative flex flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-gray-200/60 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-black/[0.08] hover:ring-gray-300/80"
             >
-              <div className="relative h-72 overflow-hidden">
+              {/* Product image */}
+              <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100/80">
                 <Image
                   src={cat.image}
                   alt={cat.name}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               </div>
 
-              {/* Color variants */}
-              {cat.variants.length > 0 && (
-                <div className="flex gap-2 px-6 pt-4">
-                  {cat.variants.slice(0, 4).map((v, i) => (
-                    <div
-                      key={i}
-                      className="h-10 w-10 overflow-hidden rounded-lg ring-1 ring-gray-200"
-                    >
-                      <Image
-                        src={v}
-                        alt={`Variante ${i + 1}`}
-                        width={40}
-                        height={40}
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                  ))}
-                  {cat.variants.length > 4 && (
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 text-xs font-medium text-gray-500">
-                      +{cat.variants.length - 4}
-                    </div>
-                  )}
-                </div>
-              )}
+              {/* Card content */}
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
+                {/* Variant thumbnails */}
+                {cat.variants.length > 0 && (
+                  <div className="mb-4 flex gap-2">
+                    {cat.variants.slice(0, 4).map((v, i) => (
+                      <div
+                        key={i}
+                        className="h-11 w-11 overflow-hidden rounded-xl ring-1 ring-black/10 transition-all duration-300 hover:ring-2 hover:ring-[#e94560]/60"
+                      >
+                        <Image
+                          src={v}
+                          alt={`Variante ${i + 1}`}
+                          width={44}
+                          height={44}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                    ))}
+                    {cat.variants.length > 4 && (
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gray-100 text-xs font-semibold text-gray-400">
+                        +{cat.variants.length - 4}
+                      </div>
+                    )}
+                  </div>
+                )}
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#0a0a0a]">{cat.name}</h3>
-                <p className="mt-2 text-gray-500">{cat.description}</p>
-                <a
-                  href={getWhatsAppUrl(
-                    `Hola! Me interesa consultar por ${cat.name} para mi empresa.`
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#0a0a0a] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#e94560]"
-                >
-                  <MessageCircle size={16} />
-                  Consultar
-                </a>
+                <h3 className="text-lg font-bold tracking-tight text-[#0a0a0a]">
+                  {cat.name}
+                </h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-gray-500">
+                  {cat.description}
+                </p>
+
+                <div className="mt-auto pt-5">
+                  <a
+                    href={getWhatsAppUrl(
+                      `Hola! Me interesa consultar por ${cat.name} para mi empresa.`
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#0a0a0a] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#e94560] hover:gap-3"
+                  >
+                    <MessageCircle size={16} />
+                    Consultar
+                    <ArrowRight size={14} className="opacity-0 -ml-4 transition-all duration-300 group-hover:opacity-100 group-hover:ml-0" />
+                  </a>
+                </div>
               </div>
             </div>
           ))}
