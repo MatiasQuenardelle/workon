@@ -72,16 +72,7 @@ export default function Hero() {
                 priority
               />
             </div>
-            {/* Floating accent cards */}
-            <div className="absolute -left-8 top-12 z-20 overflow-hidden rounded-2xl bg-white/10 p-2 shadow-2xl backdrop-blur-md ring-1 ring-white/20">
-              <Image
-                src="/images/trabajos/hasting-detalle.png"
-                alt="Detalle bordado Hasting"
-                width={120}
-                height={120}
-                className="h-24 w-24 rounded-xl object-cover"
-              />
-            </div>
+            {/* Floating accent card */}
             <div className="absolute -right-6 bottom-20 z-20 overflow-hidden rounded-2xl bg-white/10 p-2 shadow-2xl backdrop-blur-md ring-1 ring-white/20">
               <Image
                 src="/images/trabajos/exporural-bordado.jpg"
