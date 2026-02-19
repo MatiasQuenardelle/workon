@@ -20,7 +20,7 @@ export const CATEGORIES = [
   {
     name: "Remeras Chomba",
     description: "Polos bordados o estampados con el logo de tu empresa",
-    image: "https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1770058428104-9dab343b7ccc?w=800&q=80",
     variants: [
       "/images/products/chomba-blanca.png",
       "/images/products/chomba-negra.png",
@@ -32,7 +32,7 @@ export const CATEGORIES = [
   {
     name: "Remeras de Algodón",
     description: "Algodón peinado de primera calidad, múltiples colores",
-    image: "https://images.unsplash.com/photo-1604328703693-18313fe20f3a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
     variants: [
       "/images/products/remera-blanca.png",
       "/images/products/remera-negra.png",
@@ -61,7 +61,7 @@ export const CATEGORIES = [
   {
     name: "Accesorios",
     description: "Delantales, cofias y bandanas personalizados",
-    image: "https://images.unsplash.com/photo-1615689989369-ce5c12f05822?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1753351052363-53ce102830eb?w=800&q=80",
     variants: [
       "/images/trabajos/nani-delantal.png",
       "/images/trabajos/nani-bandana.png",
