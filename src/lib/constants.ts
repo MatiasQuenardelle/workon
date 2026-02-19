@@ -11,41 +11,84 @@ export function getWhatsAppUrl(message?: string) {
 export const NAV_LINKS = [
   { label: "Inicio", href: "#inicio" },
   { label: "Productos", href: "#productos" },
+  { label: "Trabajos", href: "#trabajos" },
   { label: "Nosotros", href: "#nosotros" },
   { label: "Contacto", href: "#contacto" },
 ];
 
 export const CATEGORIES = [
   {
-    name: "Polos y Remeras",
-    description: "Bordadas o estampadas con el logo de tu empresa",
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=400&fit=crop",
+    name: "Remeras Chomba",
+    description: "Polos bordados o estampados con el logo de tu empresa",
+    image: "/images/products/chomba-blanca.png",
+    variants: [
+      "/images/products/chomba-negra.png",
+      "/images/products/chomba-verde.png",
+      "/images/products/chomba-gris.png",
+      "/images/products/chomba-beige.png",
+    ],
+  },
+  {
+    name: "Remeras de Algodón",
+    description: "Algodón peinado de primera calidad, múltiples colores",
+    image: "/images/products/remera-blanca.png",
+    variants: [
+      "/images/products/remera-negra.png",
+      "/images/products/remera-gris.png",
+      "/images/products/remera-verde.png",
+      "/images/products/remera-beige.png",
+    ],
   },
   {
     name: "Camisas Corporativas",
     description: "Manga corta y larga para un look profesional",
-    image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&h=400&fit=crop",
+    image: "/images/products/camisa-hombre.png",
+    variants: [
+      "/images/products/camisa-mujer.png",
+      "/images/products/camisa-hombre-espalda.png",
+      "/images/products/camisa-mujer-espalda.png",
+    ],
   },
   {
     name: "Buzos y Camperas",
     description: "Abrigo con la identidad de tu marca",
-    image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=400&fit=crop",
-  },
-  {
-    name: "Pantalones y Bermudas",
-    description: "De vestir y de trabajo, siempre cómodos",
-    image: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&h=400&fit=crop",
+    image: "/images/trabajos/hasting-campera.png",
+    variants: [],
   },
   {
     name: "Accesorios",
-    description: "Gorras, delantales y chalecos personalizados",
-    image: "https://images.unsplash.com/photo-1588850561407-ed78c334e67a?w=600&h=400&fit=crop",
+    description: "Delantales, cofias y bandanas personalizados",
+    image: "/images/trabajos/nani-delantal.png",
+    variants: [
+      "/images/trabajos/nani-bandana.png",
+      "/images/trabajos/nani-cofia.png",
+      "/images/trabajos/nani-medio-delantal.png",
+    ],
   },
   {
     name: "Ropa de Trabajo",
-    description: "Indumentaria industrial y de seguridad",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop",
+    description: "Indumentaria industrial y de seguridad personalizada",
+    image: "/images/trabajos/star-camisa.png",
+    variants: [
+      "/images/trabajos/star-detalle.png",
+      "/images/trabajos/star-camisa-multi.png",
+    ],
   },
+];
+
+export const GALLERY_ITEMS = [
+  { image: "/images/trabajos/star-polo-promo.jpg", brand: "Star", type: "Chomba corporativa" },
+  { image: "/images/trabajos/star-polo-espalda.jpg", brand: "Star", type: "Bordado espalda" },
+  { image: "/images/trabajos/benelli.png", brand: "Benelli Nordeste", type: "Remera estampada" },
+  { image: "/images/trabajos/morbidelli.png", brand: "Morbidelli", type: "Remera estampada" },
+  { image: "/images/trabajos/celiaco-delantal.png", brand: "Centro del Celíaco", type: "Delantal bordado" },
+  { image: "/images/trabajos/hasting-campera.png", brand: "Hasting", type: "Campera bordada" },
+  { image: "/images/trabajos/braford-bordado.jpg", brand: "Braford", type: "Bordado detalle" },
+  { image: "/images/trabajos/exporural-bordado.jpg", brand: "Expo Rural Chaco", type: "Bordado detalle" },
+  { image: "/images/trabajos/brangus-bordado.jpg", brand: "Brangus", type: "Bordado detalle" },
+  { image: "/images/trabajos/hasting-detalle.png", brand: "Hasting", type: "Bordado detalle" },
+  { image: "/images/trabajos/nani-delantal.png", brand: "Nani Pastelería", type: "Delantal bordado" },
+  { image: "/images/trabajos/nani-bandana.png", brand: "Nani Pastelería", type: "Bandana bordada" },
 ];
 
 export const BENEFITS = [

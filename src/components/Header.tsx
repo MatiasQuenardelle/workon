@@ -1,17 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS, getWhatsAppUrl } from "@/lib/constants";
+import Logo from "./Logo";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a2e]/95 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <a href="#inicio" className="text-2xl font-bold tracking-wider text-white">
-          WORKON
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-[#0a0a0a]/95 shadow-lg shadow-black/20 backdrop-blur-md py-3"
+          : "bg-transparent py-5"
+      }`}
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="#inicio">
+          <Logo className="text-2xl text-white" />
         </a>
 
         {/* Desktop nav */}
@@ -29,7 +43,7 @@ export default function Header() {
             href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-[#e94560] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#d63a54]"
+            className="rounded-full bg-[#e94560] px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#d63a54] hover:shadow-lg hover:shadow-[#e94560]/25"
           >
             Pedí tu presupuesto
           </a>
@@ -47,7 +61,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <nav className="border-t border-white/10 bg-[#1a1a2e] px-4 pb-6 pt-4 md:hidden">
+        <nav className="border-t border-white/10 bg-[#0a0a0a]/95 px-4 pb-6 pt-4 backdrop-blur-md md:hidden">
           <div className="flex flex-col gap-4">
             {NAV_LINKS.map((link) => (
               <a
